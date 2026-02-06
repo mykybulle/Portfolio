@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>Portfolio Developer Futuristico</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Font futuristico -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS esterno -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Matrix background -->
+  <canvas id="matrixCanvas"></canvas>
+  <div class="matrix-overlay"></div>
+
+  <div class="page">
+    <!-- NAVBAR -->
+    <header>
+      <nav class="nav">
+        <div class="nav-left">
+          <div class="nav-logo">DV</div>
+          <div class="nav-title">
+            <span>Developer Portfolio</span>
+            <span>// Futuristic Interface</span>
+          </div>
+        </div>
+
+        <div class="nav-links">
+          <a href="#hero">Intro</a>
+          <a href="#about">About</a>
+          <a href="#skills">Stack</a>
+          <a href="#projects">Progetti</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+          Hire me
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section id="hero" data-label="// ENTRYPOINT">
+        <div class="hero">
+          <div>
+            <div class="hero-pill">
+              <span class="hero-pill-dot"></span>
+              <span>Online • Disponibile per nuovi progetti</span>
+            </div>
+
+            <h1 class="hero-title">
+              <span>Ciao, sono</span>
+              <span class="hero-title-highlight">[TUO NOME]</span>
+              <span>developer con</span>
+              <span>stile <span class="hero-title-highlight">molto</span> compilato.</span>
+            </h1>
+
+            <p class="hero-subtitle">
+              Costruisco interfacce e sistemi che sembrano provenire dal futuro,
+              ma sono ottimizzati per la realtà di <strong>oggi</strong>:
+              performance, accessibilità e clean architecture.
+            </p>
+
+            <div class="hero-actions">
+              <button class="btn-primary" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">
+                Vedi i progetti
+              </button>
+              <button class="btn-ghost" onclick="document.getElementById('skills').scrollIntoView({behavior:'smooth'})">
+                Esplora lo stack
+              </button>
+            </div>
+
+            <div class="hero-meta">
+              <div class="hero-meta-block">
+                <span class="hero-meta-label">Focus</span>
+                <span class="hero-meta-value">Frontend • Fullstack</span>
+              </div>
+              <div class="hero-meta-block">
+                <span class="hero-meta-label">Location</span>
+                <span>Remote / On-site</span>
+              </div>
+              <div class="hero-meta-block">
+                <span class="hero-meta-label">Mission</span>
+                <span>Scrivere codice che non ti vergogni di riaprire tra 6 mesi.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Console card -->
+          <aside class="hero-console" aria-label="Profilo in formato codice">
+            <div class="hero-console-header">
+              <div class="hero-console-dots">
+                <span class="hero-console-dot"></span>
+                <span class="hero-console-dot"></span>
+                <span class="hero-console-dot"></span>
+              </div>
+              <span>portfolio.ts · src/profile</span>
+              <span>UTF-8</span>
+            </div>
+
+            <div class="hero-console-body" id="consoleBody">
+              <pre class="code-line"><span class="code-comment">// boot sequence: developer profile</span></pre>
+              <pre class="code-line"><span class="code-keyword">type</span> <span class="code-fn">Developer</span> = {</pre>
+              <pre class="code-line">  name: <span class="code-string">'[TUO NOME]'</span>;</pre>
+              <pre class="code-line">  role: <span class="code-string">'Fullstack / Frontend Engineer'</span>;</pre>
+              <pre class="code-line">  location: <span class="code-string">'Italia · Remote-friendly'</span>;</pre>
+              <pre class="code-line">  stack: <span class="code-string">'TypeScript · React · Node.js · CSS architecture'</span>;</pre>
+              <pre class="code-line">  focus: [<span class="code-string">'DX'</span>, <span class="code-string">'UX'</span>, <span class="code-string">'Performance'</span>];</pre>
+              <pre class="code-line">};</pre>
+              <br />
+              <pre class="code-line"><span class="code-keyword">const</span> <span class="code-fn">initPortfolio</span> = async (): Promise&lt;void&gt; =&gt; {</pre>
+              <pre class="code-line">  <span class="code-comment">// 1. carica progetti reali</span></pre>
+              <pre class="code-line">  <span class="code-keyword">await</span> <span class="code-fn">fetchProjects</span>();</pre>
+              <pre class="code-line">  <span class="code-comment">// 2. innesta animazioni leggere, non circo</span></pre>
+              <pre class="code-line">  <span class="code-fn">injectSubtleMotion</span>();</pre>
+              <pre class="code-line">  <span class="code-comment">// 3. registra interesse del recruiter 🤝</span></pre>
+              <pre class="code-line">  <span class="code-keyword">return</span> <span class="code-fn">trackEvent</span>(<span class="code-string">'recruiter:interest'</span>);</pre>
+              <pre class="code-line">};</pre>
+              <br />
+              <pre class="code-line"><span class="code-comment">// hint: scroll down to see source code in produzione</span></pre>
+              <pre class="code-line"><span class="code-keyword">void</span> <span class="code-fn">initPortfolio</span>();</pre>
+            </div>
+
+            <div class="hero-console-footer">
+              <span><span class="hero-status-dot"></span>status: running · no errors found</span>
+              <span>CTRL + ↓ per continuare</span>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" data-label="// ABOUT.DEV">
+        <div class="section-header">
+          <h2 class="section-title">About</h2>
+          <p class="section-subtitle">
+            Non solo codice, ma modo di pensare: sistemi, pattern e prodotti
+            che devono funzionare oggi e scalare domani.
+          </p>
+        </div>
+
+        <div class="about-layout">
+          <div class="about-text">
+            <p>
+              Sono uno sviluppatore orientato al prodotto, con una forte attenzione
+              a UX, performance e manutenzione del codice. Mi piace partire dal
+              problema reale, non dall’ultima libreria di moda.
+            </p>
+            <p>
+              Lavoro bene sia in team che in autonomia: strutturo roadmap,
+              scrivo documentazione leggibile e spingo per processi che tengano
+              insieme <strong>qualità</strong> e <strong>velocità</strong>.
+            </p>
+
+            <div class="about-tags">
+              <span class="about-tag">Clean code</span>
+              <span class="about-tag">Design systems</span>
+              <span class="about-tag">Web performance</span>
+              <span class="about-tag">Developer experience</span>
+            </div>
+          </div>
+
+          <aside class="about-card">
+            <div class="about-card-block">
+              <div class="about-card-label">Esperienza</div>
+              <div class="about-card-value">+X anni tra product, startup e freelance.</div>
+            </div>
+            <div class="about-card-block">
+              <div class="about-card-label">Specialità</div>
+              <div class="about-card-value">Interfacce reattive, dashboard, sistemi interni, design system.</div>
+            </div>
+            <div class="about-card-block">
+              <div class="about-card-label">Stack attuale</div>
+              <div class="about-card-value">TypeScript, React, Next.js, Node.js, Tailwind, PostgreSQL.</div>
+            </div>
+            <div class="about-card-block">
+              <div class="about-card-label">Extra</div>
+              <div class="about-card-value">Code review severe ma gentili, mentoring, workshop interni.</div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- SKILLS / STACK -->
+      <section id="skills" data-label="// STACK.MAP">
+        <div class="section-header">
+          <h2 class="section-title">Stack</h2>
+          <p class="section-subtitle">
+            Tecnologie che uso davvero in produzione, non solo nel titolo su LinkedIn.
+          </p>
+        </div>
+
+        <div class="skill-grid">
+          <article class="skill-card">
+            <div class="skill-label">Core</div>
+            <div class="skill-main">JavaScript / TypeScript</div>
+            <div class="skill-tags">
+              <span class="skill-tag">ESNext</span>
+              <span class="skill-tag">Type-safety</span>
+              <span class="skill-tag">Node CLI</span>
+            </div>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-label">Frontend</div>
+            <div class="skill-main">React · Next.js</div>
+            <div class="skill-tags">
+              <span class="skill-tag">SPA / SSR</span>
+              <span class="skill-tag">Hooks</span>
+              <span class="skill-tag">State management</span>
+            </div>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-label">UI &amp; Styling</div>
+            <div class="skill-main">Tailwind · CSS-in-JS</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Design system</span>
+              <span class="skill-tag">Animation</span>
+              <span class="skill-tag">Responsive</span>
+            </div>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-label">Backend</div>
+            <div class="skill-main">Node.js · APIs</div>
+            <div class="skill-tags">
+              <span class="skill-tag">REST</span>
+              <span class="skill-tag">Auth</span>
+              <span class="skill-tag">Database</span>
+            </div>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-label">DevOps</div>
+            <div class="skill-main">Git · CI/CD</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Code review</span>
+              <span class="skill-tag">Testing</span>
+              <span class="skill-tag">Monitoring</span>
+            </div>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-label">Soft skills</div>
+            <div class="skill-main">Comunicazione &amp; ownership</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Team</span>
+              <span class="skill-tag">Mentoring</span>
+              <span class="skill-tag">Product thinking</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" data-label="// PROJECTS.LIST">
+        <div class="section-header">
+          <h2 class="section-title">Progetti</h2>
+          <p class="section-subtitle">
+            Alcuni esempi di cose che ho messo online e che non ho paura di mostrare in pubblico.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-label">/01</div>
+            <h3 class="project-title">Command Center Dashboard</h3>
+            <p class="project-description">
+              Una dashboard real-time per monitorare metriche di prodotto, eventi e alert.
+              Pensata per restare aperta tutto il giorno su uno schermo grande.
+            </p>
+            <div class="project-meta">
+              <div class="project-tags">
+                <span class="project-tag">React</span>
+                <span class="project-tag">TypeScript</span>
+                <span class="project-tag">WebSockets</span>
+              </div>
+              <div class="project-links">
+                <a class="project-link" href="#" target="_blank" rel="noreferrer">Live</a>
+                <a class="project-link" href="#" target="_blank" rel="noreferrer">Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-label">/02</div>
+            <h3 class="project-title">Design System Studio</h3>
+            <p class="project-description">
+              Un mini design system componibile per allineare UI tra più prodotti.
+              Libreria di componenti, tokens e documentazione tecnica.
+            </p>
+            <div class="project-meta">
+              <div class="project-tags">
+                <span class="project-tag">Storybook</span>
+                <span class="project-tag">Tailwind</span>
+                <span class="project-tag">Design tokens</span>
+              </div>
+              <div class="project-links">
+                <a class="project-link" href="#" target="_blank" rel="noreferrer">Docs</a>
+                <a class="project-link" href="#" target="_blank" rel="noreferrer">Repo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-label">/03</div>
+            <h3 class="project-title">Developer Tools Kit</h3>
+            <p class="project-description">
+              Suite di piccoli tool per developer: formatter, snippet generator,
+              visualizzatore JSON e altri strumenti che uso ogni giorno.
+            </p>
+            <div class="project-meta">
+              <div class="project-tags">
+                <span class="project-tag">Next.js</span>
+                <span class="project-tag">API Routes</span>
+                <span class="project-tag">DX</span>
+              </div>
+              <div class="project-links">
+                <a class="project-link" href="#" target="_blank" rel="noreferrer">Live</a>
+                <a class="project-link" href="#" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" data-label="// CONTACT.ME">
+        <div class="section-header">
+          <h2 class="section-title">Contact</h2>
+          <p class="section-subtitle">
+            Hai un progetto ambizioso, un team che ha bisogno di rinforzi o solo una codebase da rimettere in riga?
+          </p>
+        </div>
+
+        <div class="contact-layout">
+          <aside class="contact-card">
+            <p>
+              <strong>TL;DR:</strong> se cerchi qualcuno che tratti la tua app come se fosse sua,
+              che non abbia paura di guardare il codice legacy e che sappia parlare sia con designer
+              che con stakeholder, potremmo trovarci bene.
+            </p>
+
+            <div class="contact-meta">
+              <div class="contact-meta-item">
+                <div class="contact-meta-label">Email</div>
+                <div class="contact-meta-value">tuo.nome@devmail.com</div>
+              </div>
+              <div class="contact-meta-item">
+                <div class="contact-meta-label">GitHub</div>
+                <div class="contact-meta-value">@tuo-handle</div>
+              </div>
+              <div class="contact-meta-item">
+                <div class="contact-meta-label">LinkedIn</div>
+                <div class="contact-meta-value">/in/tuo-profilo</div>
+              </div>
+            </div>
+          </aside>
+
+          <form class="contact-form" id="contactForm">
+            <div class="contact-form-row">
+              <div class="field">
+                <label class="field-label" for="name">Nome</label>
+                <input id="name" type="text" placeholder="Chi sei?" required />
+              </div>
+              <div class="field">
+                <label class="field-label" for="email">Email</label>
+                <input id="email" type="email" placeholder="dove ti rispondo?" required />
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="field-label" for="project">Progetto</label>
+              <input id="project" type="text" placeholder="Un redesign, una nuova app, refactoring...?" />
+            </div>
+
+            <div class="field" style="margin-top:0.8rem;">
+              <label class="field-label" for="message">Messaggio</label>
+              <textarea id="message" rows="4" placeholder="Dimmi in poche righe cosa vuoi costruire."></textarea>
+            </div>
+
+            <div class="contact-form-footer">
+              <div class="contact-form-status" id="formStatus">
+                <span class="hero-status-dot"></span>
+                <span>form in modalità demo — collega qui il tuo backend o servizio di email.</span>
+              </div>
+              <button class="contact-submit" type="submit">
+                Invia richiesta
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <span>© <span id="year"></span> Bulleri Michael — Crafted with code, not page builders.</span>
+    <div class="footer-links">
+      <a href="#hero">Back to top</a>
+      <a href="#projects">Progetti</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </footer>
+
+  <!-- JS esterno -->
+  <script src="script.js"></script>
+</body>
+</html>
