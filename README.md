@@ -23,8 +23,8 @@ Un portfolio personale moderno con estetica Cyberpunk/Terminale, animazioni flui
 
 1. **Clona la repository**
    ```bash
-   git clone https://github.com/tuo-username/portfolio-futuristico.git
-   cd portfolio-futuristico
+   git clone https://github.com/mykybulle/Portfolio.git
+   cd Portfolio
    ```
 
 2. **Inizializza il progetto e installa le dipendenze**
