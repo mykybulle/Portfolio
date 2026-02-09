@@ -57,7 +57,10 @@ Visita `http://localhost:3000` nel tuo browser.
 
 - **Contenuti**: Modifica `index.html` per cambiare testi, progetti e skill.
 - **Stili**: I colori principali sono definiti nelle variabili CSS in `style.css`.
-- **Logica**: Modifica `script.js` per cambiare la velocità o i caratteri dell'effetto Matrix.
+
+## 🎨 Hai qualche richiesta?
+
+**Developer**: Mykybulledev.com
 
 ## 📄 Licenza
 
